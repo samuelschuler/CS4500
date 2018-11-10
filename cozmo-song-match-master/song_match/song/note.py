@@ -13,9 +13,14 @@ WHOLE_NOTE = HALF_NOTE * 2  #: Time for whole note.
 class Note:
     """Represents a musical note."""
 
+    # Defining a note
     def __init__(self, note: str, duration: int = QUARTER_NOTE):
         self.duration = duration
         self.note = note
+
+        # This calls the constructor method for the Sound class, where the __sound is
+        # a member variable of the Note class.
+        # get_piano_note_sound_path() is in sound_effects.py
         self.__sound = Sound(get_piano_note_sound_path(note))
 
     def play(self) -> None:
