@@ -14,13 +14,22 @@ class Note:
     """Represents a musical note."""
 
     # Defining a note
+    # Default value (if not provided) for duration is a QUARTER_NOTE
     def __init__(self, note: str, duration: int = QUARTER_NOTE):
         self.duration = duration
         self.note = note
 
+        # Add a instrument member variable, such as self.instrument,
+        # so we can invoke get_note_sound_path(note) and that function will know
+        # whether the instrument is piano, flute, or guitar
+        # self.instrument = instrument   <--- where instrument will be provided as a string argument when
+        #                                       invoking Note()
+        # ex Note() call: Note('A3', EIGHTH_NOTE, guitar)
+
         # This calls the constructor method for the Sound class, where the __sound is
         # a member variable of the Note class.
         # get_piano_note_sound_path() is in sound_effects.py
+        # We will need to change this and allow it to choose flute, piano, or guitar
         self.__sound = Sound(get_piano_note_sound_path(note))
 
     def play(self) -> None:

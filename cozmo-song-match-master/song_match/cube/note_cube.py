@@ -32,6 +32,7 @@ class NoteCube:
         cube = get_light_cube(song_robot, cube_id)
         return NoteCube(cube, song_robot.song)
 
+    # The blink duration is only 0.125 seconds long.
     async def blink_and_play_note(self, blink_duration=0.125) -> None:
         """Blink the cube and play the corresponding note.
 
