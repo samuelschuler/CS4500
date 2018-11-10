@@ -30,6 +30,8 @@ class HotCrossBuns(Song):
 
     @property
     def _sequence(self) -> List[Note]:
+        # Defining the notes for hot cross buns
+
         a_eighth = Note('A3', EIGHTH_NOTE)
         g_eighth = Note('G3', EIGHTH_NOTE)
         b_quarter = Note('B3', QUARTER_NOTE)
