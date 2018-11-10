@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bad48846-18f6-4a03-ad79-e1aea8f79d66" name="Default" comment="Added Sax notes">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/CS4500.iml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_A#4.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_A#5.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_A#6.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_A4.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_A5.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_A6.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_B4.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_B5.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_B6.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_C#4.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_C#5.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_C#6.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_C#7.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_C4.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_C5.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_C6.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_C7.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_D#4.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_D#5.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_D#6.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_D#7.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_D4.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_D5.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_D6.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_D7.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_E4.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_E5.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_E6.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_E7.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_F#4.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_F#5.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_F#6.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_F4.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_F5.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_F6.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_F7.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_G#4.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_G#5.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_G#6.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_G4.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_G5.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_G6.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/saxophone_A#3.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/saxophone_A#4.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/saxophone_A#5.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/saxophone_A3.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/saxophone_A4.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/saxophone_A5.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/saxophone_B3.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/saxophone_B4.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/saxophone_B5.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/saxophone_C#4.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/saxophone_C#5.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/saxophone_C#6.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/saxophone_C4.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/saxophone_C5.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/saxophone_C6.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/saxophone_D#3.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/saxophone_D#4.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/saxophone_D#5.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/saxophone_D.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/saxophone_D4.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/saxophone_D5.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/saxophone_D6.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/saxophone_E3.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/saxophone_E4.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/saxophone_E5.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/saxophone_E6.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/saxophone_F#3.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/saxophone_F#4.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/saxophone_F#5.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/saxophone_F3.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/saxophone_F4.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/saxophone_F5.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/saxophone_F6.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/saxophone_G#3.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/saxophone_G#4.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/saxophone_G#5.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/saxophone_G3.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/saxophone_G4.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/saxophone_G5.wav" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Sefik &lt;sefikm10@gmail.com&gt;" />
+      </list>
+    </option>
+    <option name="UPDATE_TYPE" value="MERGE" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--follow-tags" />
+        <option name="title" value="Current Branch" />
+      </GitPushTagMode>
+    </option>
+    <push-targets>
+      <push-target-info target-remote="origin" target-branch="master" repo="$PROJECT_DIR$" source="SefiksBranch" />
+      <push-target-info target-remote="origin" target-branch="SefiksBranch" repo="$PROJECT_DIR$" source="master" />
+    </push-targets>
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="SefiksBranch" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/cozmo-song-match-master/song_match/config.py" />
+        <option value="$PROJECT_DIR$/cozmo-song-match-master/song_match/cube_mat.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="421" />
+    <option name="y" value="47" />
+    <option name="width" value="1073" />
+    <option name="height" value="733" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="CS4500" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CS4500" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CS4500" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CS4500" type="462c0819:PsiDirectoryNode" />
+              <item name="cozmo-song-match-master" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CS4500" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CS4500" type="462c0819:PsiDirectoryNode" />
+              <item name="cozmo-song-match-master" type="462c0819:PsiDirectoryNode" />
+              <item name="song_match" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CS4500" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CS4500" type="462c0819:PsiDirectoryNode" />
+              <item name="cozmo-song-match-master" type="462c0819:PsiDirectoryNode" />
+              <item name="song_match" type="462c0819:PsiDirectoryNode" />
+              <item name="sound_effects" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$USER_HOME$/.PyCharmCE2017.3" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Sefik\PycharmProjects\CS4500\cozmo-song-match-master\song_match\sound_effects\Saxophone" />
+      <recent name="C:\Users\Sefik\PycharmProjects\CS4500\cozmo-song-match-master\song_match\sound_effects\Flute" />
+      <recent name="C:\Users\Sefik\PycharmProjects\CS4500\cozmo-song-match-master\song_match\sound_effects\flute" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="sound_effects" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="CS4500" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/sound_effects.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Python.sound_effects" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bad48846-18f6-4a03-ad79-e1aea8f79d66" name="Default" comment="" />
+      <created>1541881818538</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1541881818538</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Added flute notes">
+      <created>1541889782759</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1541889782759</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added Sax notes">
+      <created>1541893221615</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1541893221615</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="421" y="47" width="1073" height="733" extended-state="0" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45411542" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2852598" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5016129" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added flute notes" />
+    <MESSAGE value="Added Sax notes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Sax notes" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/cozmo-song-match-master/song_match/cube_mat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1105">
+          <caret line="68" column="11" lean-forward="false" selection-start-line="68" selection-start-column="11" selection-end-line="68" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#23#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cozmo-song-match-master/song_match/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cozmo-song-match-master/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#35#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/sound_effects.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#9#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cozmo-song-match-master/LICENSE">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cozmo-song-match-master/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cozmo-song-match-master/song_match/cube_mat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1105">
+          <caret line="68" column="11" lean-forward="false" selection-start-line="68" selection-start-column="11" selection-end-line="68" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#23#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/sound_effects.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cozmo-song-match-master/song_match/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cozmo-song-match-master/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#35#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
