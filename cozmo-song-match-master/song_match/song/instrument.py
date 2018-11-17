@@ -1,8 +1,7 @@
 class Instrument:
-    def __init__(self):
+    def __init__(self, instrument_type: str):
         # Piano instrument by default #
-        self.instrument = "Piano"
+        self.instrument = instrument_type
 
     def get_instrument(self) -> str:
-        # Randomly return an instrument #
-        return "Piano"
+        return self.instrument
