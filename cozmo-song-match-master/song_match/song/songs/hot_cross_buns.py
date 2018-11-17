@@ -8,6 +8,7 @@ from song_match.cube.lights import BLUE_LIGHT
 from song_match.cube.lights import CYAN_LIGHT
 from song_match.cube.lights import PINK_LIGHT
 from song_match.song import Song
+from song_match.song.instrument import Instrument
 from song_match.song.note import EIGHTH_NOTE
 from song_match.song.note import HALF_NOTE
 from song_match.song.note import Note
@@ -21,7 +22,12 @@ class HotCrossBuns(Song):
     """Hot Cross Buns"""
 
     @property
+    def _instrument(self) -> Instrument:
+        return Instrument.get_instrument()
+
+    @property
     def _notes(self) -> List[Note]:
+        print("The instrument is ", self._instrument, " \n")
         return [
             Note('G3'),
             Note('A3'),
