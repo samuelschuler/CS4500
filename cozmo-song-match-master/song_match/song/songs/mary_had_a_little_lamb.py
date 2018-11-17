@@ -22,10 +22,11 @@ class MaryHadALittleLamb(Song):
 
     @property
     def _instrument(self) -> Instrument:
-        return Instrument.get_instrument()
+        return Instrument("Piano")
 
     @property
     def _notes(self) -> List[Note]:
+        print("The instrument is ", self._instrument, " \n")
         return [
             Note('C4'),
             Note('D4'),
