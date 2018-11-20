@@ -23,11 +23,11 @@ class HotCrossBuns(Song):
 
     @property
     def _instrument(self) -> Instrument:
-        return Instrument("Piano")
+        return Instrument()
 
     @property
     def _notes(self) -> List[Note]:
-        print("The instrument is ", self._instrument, " \n")
+        print("The instrument is ", self._instrument.get_instrument_str(), " \n")
         return [
             Note('G3'),
             Note('A3'),
