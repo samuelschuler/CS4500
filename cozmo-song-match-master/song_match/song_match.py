@@ -51,6 +51,8 @@ class SongMatch:
         :type robot: :class:`~cozmo.robot.Robot`
         :return: None
         """
+
+        # *****THIS COULD BE WHERE WE SET THE INSTRUMENT FOR THE SONG, PERHAPS****
         self._song_robot = SongRobot(robot, self._song)
         self._note_cubes = NoteCubes.of(self._song_robot)
         self._effect_factory = EffectFactory(self._song_robot)

@@ -7,6 +7,7 @@ from cozmo.lights import Light
 
 from song_match.cube_mat import CubeMat
 from .note import Note
+from .instrument import Instrument
 
 
 class Song(ABC):
@@ -31,6 +32,9 @@ class Song(ABC):
         mat_position = CubeMat.cube_id_to_position(cube_id)
         index = self._get_index(mat_position)
         return self._notes[index]
+
+    def get_instrument(self):
+        return self._instrument
 
     def play_note(self, cube_id: int) -> None:
         """Play the note for a corresponding cube.
@@ -153,6 +157,11 @@ class Song(ABC):
     @abstractmethod
     def _notes(self) -> List[Note]:
         """Returns a list of 3 notes in ascending order by pitch."""
+
+    @property
+    @abstractmethod
+    def _instrument(self) -> Instrument:
+        """ Returns the instrument for this song """
 
     @property
     @abstractmethod

@@ -8,7 +8,7 @@ from song_match.cube.lights import BLUE_LIGHT
 from song_match.cube.lights import CYAN_LIGHT
 from song_match.cube.lights import PINK_LIGHT
 from song_match.song import Song
-from song_match.song.note import HALF_NOTE
+#from song_match.song.note import HALF_NOTE
 from song_match.song.note import Note
 from song_match.song.note import QUARTER_NOTE
 
@@ -36,17 +36,18 @@ class ItsyBitsy(Song):
 
     @property
     def _sequence(self) -> List[Note]:
-        c_quarter = Note('C4', QUARTER_NOTE)
+        g_quarter = Note('G4', QUARTER_NOTE)
         d_quarter = Note('D4', QUARTER_NOTE)
-        e_quarter = Note('E4', QUARTER_NOTE)
-        d_half = Note('D4', HALF_NOTE)
-        e_half = Note('E4', HALF_NOTE)
+        b_quarter = Note('E4', QUARTER_NOTE)
+        a_quarter = Note('A4', QUARTER_NOTE)
+        c_quarter = Note('C4', QUARTER_NOTE)
+
         return [
-            e_quarter, d_quarter, c_quarter, d_quarter, e_quarter,
-            e_quarter, e_half, d_quarter, d_quarter, d_half,
-            e_quarter, e_quarter, e_half, e_quarter, d_quarter,
-            c_quarter, d_quarter, e_quarter, e_quarter, e_half,
-            d_quarter, d_quarter, e_quarter, d_quarter, c_quarter,
+            d_quarter, g_quarter, g_quarter, g_quarter, a_quarter,
+            b_quarter, b_quarter, b_quarter, a_quarter, g_quarter,
+            a_quarter, b_quarter, g_quarter, b_quarter, b_quarter,
+            c_quarter, d_quarter, d_quarter, c_quarter, b_quarter,
+            c_quarter, b_quarter, c_quarter,  d_quarter, b_quarter,
         ]
 
     @property
