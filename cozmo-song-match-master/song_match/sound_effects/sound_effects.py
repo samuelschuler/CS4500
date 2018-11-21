@@ -14,6 +14,8 @@ WRONG_BUZZER = 'wrong-buzzer'
 # Sound effect packages
 GAME = 'game'
 PIANO = 'piano'
+FLUTE = "flute"
+SAXAPHONE = "saxaphone"
 
 
 def get_collect_point_sound() -> Sound:
@@ -64,6 +66,7 @@ def play_wrong_buzzer_sound() -> None:
     get_wrong_buzzer_sound().play()
 
 
+# Change this so that the function method also accepts the name of the instrument #
 def get_piano_note_sound_path(name: str) -> str:
     """Get the path to a piano note sound file.
 
