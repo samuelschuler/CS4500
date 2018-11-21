@@ -33,7 +33,7 @@ class Song(ABC):
         index = self._get_index(mat_position)
         return self._notes[index]
 
-    def get_instrument(self):
+    def get_instrument(self) -> Instrument:
         return self._instrument
 
     def play_note(self, cube_id: int) -> None:

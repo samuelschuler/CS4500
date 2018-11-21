@@ -27,7 +27,9 @@ class HotCrossBuns(Song):
 
     @property
     def _notes(self) -> List[Note]:
-        print("The instrument is ", self._instrument, " \n")
+        print("The instrument is ", self._instrument.get_instrument()
+        
+        , " \n")
         return [
             Note('G3'),
             Note('A3'),

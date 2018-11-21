@@ -26,7 +26,7 @@ class MaryHadALittleLamb(Song):
 
     @property
     def _notes(self) -> List[Note]:
-        print("The instrument is ", self._instrument, " \n")
+        print("The instrument is ", self._instrument.get_instrument(), " \n")
         return [
             Note('C4'),
             Note('D4'),

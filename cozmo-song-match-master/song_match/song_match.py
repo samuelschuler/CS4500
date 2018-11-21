@@ -173,7 +173,7 @@ class SongMatch:
         await self.__play_notes(self._song.get_sequence())
         await animation.wait_for_completed()
         sleep(1)
-        exit(0)
+        exit(0) 
 
     async def __get_winners(self) -> List[Player]:
         return [player for player in self._players if player.did_win]
