@@ -23,7 +23,8 @@ class HotCrossBuns(Song):
 
     @property
     def _instrument(self) -> Instrument:
-        return Instrument()
+        self._instrument.set_instrument()
+        return self._instrument
 
     @property
     def _notes(self) -> List[Note]:

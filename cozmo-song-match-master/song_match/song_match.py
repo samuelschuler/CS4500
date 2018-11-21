@@ -95,6 +95,8 @@ class SongMatch:
         while self._song.is_not_finished(current_position):
             await self.__play_round_transition_effect()
 
+            print("The instrument for the song is: ", self._song.get_instrument().get_instrument_str())
+
             notes = self._song.get_sequence_slice(current_position)
             await self.__play_notes(notes)
 
