@@ -26,6 +26,15 @@ class Song(ABC):
         self._instrument = Instrument()
         self._instrument.set_instrument()
 
+        self.random_note_one = 'A3'
+        self.random_note_two = 'A3'
+        self.random_note_three = 'A3'
+
+        self.seq = list()
+
+        self.is_seq_set = False
+        self.is_notes_set = False
+
     def get_note(self, cube_id: int) -> Note:
         """Get the :class:`~song_match.song.note.Note` for a corresponding cube.
 
@@ -35,6 +44,9 @@ class Song(ABC):
         mat_position = CubeMat.cube_id_to_position(cube_id)
         index = self._get_index(mat_position)
         return self._notes[index]
+
+    def get_note_at_pos(self, index: int) -> str:
+        return self._notes[index].to_str()
 
     def get_instrument(self) -> Instrument:
         return self._instrument

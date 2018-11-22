@@ -14,7 +14,7 @@ WRONG_BUZZER = 'wrong-buzzer'
 # Sound effect packages
 GAME = 'game'
 PIANO = 'piano'
-FLUTE = "flute"
+CLARINET = "clarinet"
 SAXAPHONE = "saxaphone"
 
 
@@ -68,14 +68,13 @@ def play_wrong_buzzer_sound() -> None:
 
 # Change this so that the function method also accepts the name of the instrument
 # def get_piano_note_sound_path(name: str) -> str:#
-def get_piano_note_sound_path(name: str, instrument: str) -> str:
+def get_note_sound_path(name: str, instrument: str) -> str:
     """Get the path to a piano note sound file.
 
     :param name: The name of the note. For example, C4.
     :param instrument: The name of the instrument to be played.
     :return: The path to a piano note sound.
     """
-    print("get_piano_note_sound_path: instrument is ", instrument)
     return __get_sound_path(name, instrument)
 
 
@@ -85,12 +84,9 @@ def __get_game_sound_path(name: str) -> str:
 
 def __get_sound_path(name: str, sound_effect_package: str) -> str:
     # This gets the file soundpath for a note  #
-    print("__get_sound_path: name is ", name, " sound_effect_package is ", sound_effect_package)
+    # print("__get_sound_path: name is ", name, " sound_effect_package is ", sound_effect_package)#
     filename = name + '.wav'
-    print("__get_sound_path: filename is ", filename)
     path = os.path.join(ROOT_DIR, 'sound_effects', sound_effect_package, filename)
-
-    print("__get_sound_path: the path is ", path)
 
     if not os.path.isfile(path):
         if sound_effect_package == GAME:

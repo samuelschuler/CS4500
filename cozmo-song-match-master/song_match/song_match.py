@@ -51,8 +51,6 @@ class SongMatch:
         :type robot: :class:`~cozmo.robot.Robot`
         :return: None
         """
-
-        # *****THIS COULD BE WHERE WE SET THE INSTRUMENT FOR THE SONG, PERHAPS****
         print("In song_match.play")
         self._song_robot = SongRobot(robot, self._song)
         self._note_cubes = NoteCubes.of(self._song_robot)
@@ -97,6 +95,7 @@ class SongMatch:
         current_position = STARTING_POSITION
         print("in init game loop")
         print("the song's instrument is ", self._song.get_instrument().get_instrument_str())
+
         while self._song.is_not_finished(current_position):
             await self.__play_round_transition_effect()
 

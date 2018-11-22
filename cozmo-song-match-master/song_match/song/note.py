@@ -2,12 +2,16 @@
 
 from pygame.mixer import Sound
 
-from song_match.sound_effects import get_piano_note_sound_path
+from song_match.sound_effects import get_note_sound_path
 
 EIGHTH_NOTE = .2  #: Time for eighth note.
 QUARTER_NOTE = EIGHTH_NOTE * 2  #: Time for quarter note.
 HALF_NOTE = QUARTER_NOTE * 2  #: Time for half note.
 WHOLE_NOTE = HALF_NOTE * 2  #: Time for whole note.
+#: Time for a dotted quarter. A quarter note plus one-half of an eighth note, or 3 eighth notes
+DOTTED_QUARTER_NOTE = EIGHTH_NOTE * 3
+#: Time for a dotted half. 3 quarter notes
+DOTTED_HALF_NOTE = QUARTER_NOTE * 3
 
 
 class Note:
@@ -30,8 +34,7 @@ class Note:
         # a member variable of the Note class.
         # get_piano_note_sound_path() is in sound_effects.py
         # We will need to change this and allow it to choose flute, piano, or guitar
-        print("Note: __init__: instrument is ", instrument)
-        self.__sound = Sound(get_piano_note_sound_path(note, instrument))
+        self.__sound = Sound(get_note_sound_path(note, instrument))
 
     def play(self) -> None:
         """Play the note.
@@ -39,6 +42,9 @@ class Note:
         :return: None
         """
         self.__sound.play()
+
+    def to_str(self) -> str:
+        return self.note
 
     def __eq__(self, other):
         return isinstance(other, Note) and self.note == other.note

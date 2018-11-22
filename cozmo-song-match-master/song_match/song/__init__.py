@@ -8,3 +8,4 @@ from .song import Song
 from .songs import HotCrossBuns
 from .songs import MaryHadALittleLamb
 from .songs import RainRainGoAway
+from .songs import RandomSong
