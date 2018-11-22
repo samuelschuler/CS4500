@@ -53,13 +53,16 @@ class SongMatch:
         """
 
         # *****THIS COULD BE WHERE WE SET THE INSTRUMENT FOR THE SONG, PERHAPS****
+        print("In song_match.play")
         self._song_robot = SongRobot(robot, self._song)
         self._note_cubes = NoteCubes.of(self._song_robot)
         self._effect_factory = EffectFactory(self._song_robot)
+        print("song_match: setup song, notes, and effect factory")
         await self.__setup()
         await self.__init_game_loop()
 
     async def __setup(self) -> None:
+        print("in song_match.setup")
         await self._song_robot.world.wait_until_num_objects_visible(3, object_type=LightCube)
         CubeMat.order_cubes_by_position(self._song_robot)
         self._song_robot.world.add_event_handler(EvtObjectTapped, self.__tap_handler)
@@ -92,10 +95,10 @@ class SongMatch:
 
     async def __init_game_loop(self) -> None:
         current_position = STARTING_POSITION
+        print("in init game loop")
+        print("the song's instrument is ", self._song.get_instrument().get_instrument_str())
         while self._song.is_not_finished(current_position):
             await self.__play_round_transition_effect()
-
-            print("The instrument for the song is: ", self._song.get_instrument().get_instrument_str())
 
             notes = self._song.get_sequence_slice(current_position)
             await self.__play_notes(notes)

@@ -4,10 +4,94 @@
     <list default="true" id="8c5d0e50-6968-476d-aa89-fec103eb4b9a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/song/instrument.py" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/song/instrument.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/song/note.py" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/song/note.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/song/song.py" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/song/song.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/song/songs/hot_cross_buns.py" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/song/songs/hot_cross_buns.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/song/songs/mary_had_a_little_lamb.py" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/song/songs/mary_had_a_little_lamb.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/song/songs/rain_rain_go_away.py" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/song/songs/rain_rain_go_away.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/song_match.py" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/song_match.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_A#4.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_A#5.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_A#6.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_A4.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_A5.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_A6.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_B4.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_B5.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_B6.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_C#4.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_C#5.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_C#6.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_C#7.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_C4.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_C5.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_C6.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_C7.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_D#4.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_D#5.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_D#6.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_D#7.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_D4.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_D5.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_D6.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_D7.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_E4.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_E5.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_E6.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_E7.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_F#4.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_F#5.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_F#6.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_F4.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_F5.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_F6.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_F7.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_G#4.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_G#5.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_G#6.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_G4.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_G5.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Flute/flute_G6.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/A#3.wav" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/saxaphone/A#3.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/A#4.wav" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/saxaphone/A#4.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/A#5.wav" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/saxaphone/A#5.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/A3.wav" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/saxaphone/A3.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/A4.wav" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/saxaphone/A4.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/A5.wav" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/saxaphone/A5.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/B3.wav" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/saxaphone/B3.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/B4.wav" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/saxaphone/B4.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/B5.wav" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/saxaphone/B5.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/C#4.wav" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/saxaphone/C#4.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/C#5.wav" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/saxaphone/C#5.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/C#6.wav" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/saxaphone/C#6.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/C4.wav" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/saxaphone/C4.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/C5.wav" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/saxaphone/C5.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/C6.wav" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/saxaphone/C6.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/D#3.wav" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/saxaphone/D#3.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/D#4.wav" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/saxaphone/D#4.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/D#5.wav" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/saxaphone/D#5.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/D.wav" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/saxaphone/D.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/D4.wav" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/saxaphone/D4.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/D5.wav" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/saxaphone/D5.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/D6.wav" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/saxaphone/D6.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/E3.wav" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/saxaphone/E3.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/E4.wav" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/saxaphone/E4.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/E5.wav" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/saxaphone/E5.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/E6.wav" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/saxaphone/E6.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/F#3.wav" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/saxaphone/F#3.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/F#4.wav" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/saxaphone/F#4.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/F#5.wav" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/saxaphone/F#5.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/F3.wav" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/saxaphone/F3.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/F4.wav" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/saxaphone/F4.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/F5.wav" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/saxaphone/F5.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/F6.wav" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/saxaphone/F6.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/G#3.wav" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/saxaphone/G#3.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/G#4.wav" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/saxaphone/G#4.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/G#5.wav" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/saxaphone/G#5.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/G3.wav" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/saxaphone/G3.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/G4.wav" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/saxaphone/G4.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/Saxophone/G5.wav" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/saxaphone/G5.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/sound_effects.py" beforeDir="false" afterPath="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/sound_effects.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,12 +103,13 @@
     <session id="1028245286">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.24" value="1" />
+          <entry key="project.open.time.26" value="1" />
           <entry key="project.open.time.38" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.60" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -32,7 +117,7 @@
           <entry key="Makefile" value="1" />
           <entry key="bat" value="1" />
           <entry key="md" value="2" />
-          <entry key="py" value="73" />
+          <entry key="py" value="77" />
           <entry key="rst" value="10" />
         </counts>
       </usages-collector>
@@ -40,7 +125,7 @@
         <counts>
           <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="73" />
+          <entry key="Python" value="77" />
           <entry key="ReST" value="10" />
         </counts>
       </usages-collector>
@@ -48,7 +133,7 @@
         <counts>
           <entry key="Python Console" value="49" />
           <entry key="md" value="28" />
-          <entry key="py" value="2874" />
+          <entry key="py" value="4243" />
           <entry key="txt" value="141" />
         </counts>
       </usages-collector>
@@ -56,7 +141,7 @@
         <counts>
           <entry key="Markdown" value="28" />
           <entry key="PLAIN_TEXT" value="141" />
-          <entry key="Python" value="2923" />
+          <entry key="Python" value="4292" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -69,38 +154,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/cozmo-song-match-master/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="49" column="17" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cozmo-song-match-master/song_match/song/instrument.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
-              <folding>
-                <marker date="1542760657818" expanded="true" signature="486:547" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cozmo-song-match-master/song_match/song/song.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="174" lean-forward="true" selection-start-line="174" selection-end-line="174" />
+            <state relative-caret-position="153">
+              <caret line="47" column="37" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
               <folding>
                 <element signature="e#62#97#0" expanded="true" />
-                <marker date="1542417910394" expanded="true" signature="5527:5586" ph="..." />
+                <marker date="1542844537688" expanded="true" signature="818:906" ph="..." />
+                <marker date="1542844537688" expanded="true" signature="1361:1399" ph="..." />
+                <marker date="1542844537688" expanded="true" signature="5558:5563" ph="..." />
               </folding>
             </state>
           </provider>
@@ -109,7 +172,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cozmo-song-match-master/song_match/song/note.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
+            <state relative-caret-position="289">
               <caret line="32" column="59" lean-forward="true" selection-start-line="32" selection-start-column="59" selection-end-line="32" selection-end-column="59" />
               <folding>
                 <element signature="e#62#92#0" expanded="true" />
@@ -119,10 +182,46 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cozmo-song-match-master/song_match/song_match.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="98" column="91" selection-start-line="98" selection-start-column="91" selection-end-line="98" selection-end-column="91" />
+              <folding>
+                <element signature="e#68#93#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cozmo-song-match-master/song_match/song_robot.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="265" selection-start-line="265" selection-end-line="265" />
+              <folding>
+                <element signature="e#68#100#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cozmo-song-match-master/song_match/song/instrument.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
+              <folding>
+                <marker date="1542760657818" expanded="true" signature="486:547" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cozmo-song-match-master/song_match/song/songs/mary_had_a_little_lamb.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
-              <caret line="24" column="8" lean-forward="true" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="41" />
+              <caret line="15" column="10" lean-forward="true" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
               <folding>
                 <element signature="e#100#123#0" expanded="true" />
               </folding>
@@ -131,38 +230,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cozmo-song-match-master/song_match/song/songs/hot_cross_buns.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="25" column="8" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="26" selection-end-column="31" />
-              <folding>
-                <element signature="e#86#109#0" expanded="true" />
-                <marker date="1542760658242" expanded="true" signature="666:746" ph="..." />
-                <marker date="1542760658242" expanded="true" signature="971:977" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cozmo-song-match-master/song_match/song/songs/rain_rain_go_away.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
-              <folding>
-                <element signature="e#91#114#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/sound_effects.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="68" column="82" lean-forward="true" selection-start-line="68" selection-start-column="82" selection-end-line="68" selection-end-column="82" />
+            <state relative-caret-position="170">
+              <caret line="78" column="45" lean-forward="true" selection-start-line="78" selection-start-column="45" selection-end-line="78" selection-end-column="45" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
+                <marker date="1542846242298" expanded="true" signature="1567:1572" ph="..." />
               </folding>
             </state>
           </provider>
@@ -176,6 +250,11 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>play</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="UPDATE_TYPE" value="MERGE" />
@@ -194,15 +273,15 @@
       <list>
         <option value="$PROJECT_DIR$/cozmo-song-match-master/song_match/cube/note_cube.py" />
         <option value="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/game/README.md" />
-        <option value="$PROJECT_DIR$/cozmo-song-match-master/song_match/song_match.py" />
-        <option value="$PROJECT_DIR$/cozmo-song-match-master/song_match/song/note.py" />
-        <option value="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/sound_effects.py" />
-        <option value="$PROJECT_DIR$/cozmo-song-match-master/song_match/song/song.py" />
         <option value="$PROJECT_DIR$/cozmo-song-match-master/song_match/song/instrument.py" />
-        <option value="$PROJECT_DIR$/cozmo-song-match-master/song_match/song/songs/mary_had_a_little_lamb.py" />
-        <option value="$PROJECT_DIR$/cozmo-song-match-master/song_match/song/songs/hot_cross_buns.py" />
-        <option value="$PROJECT_DIR$/cozmo-song-match-master/song_match/song/songs/rain_rain_go_away.py" />
         <option value="$PROJECT_DIR$/cozmo-song-match-master/main.py" />
+        <option value="$PROJECT_DIR$/cozmo-song-match-master/song_match/song_match.py" />
+        <option value="$PROJECT_DIR$/cozmo-song-match-master/song_match/song/song.py" />
+        <option value="$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/sound_effects.py" />
+        <option value="$PROJECT_DIR$/cozmo-song-match-master/song_match/song/note.py" />
+        <option value="$PROJECT_DIR$/cozmo-song-match-master/song_match/song/songs/rain_rain_go_away.py" />
+        <option value="$PROJECT_DIR$/cozmo-song-match-master/song_match/song/songs/hot_cross_buns.py" />
+        <option value="$PROJECT_DIR$/cozmo-song-match-master/song_match/song/songs/mary_had_a_little_lamb.py" />
       </list>
     </option>
   </component>
@@ -390,7 +469,14 @@
       <option name="project" value="LOCAL" />
       <updated>1542758184608</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Adding instrument class">
+      <created>1542760838791</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1542760838791</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView">
@@ -411,9 +497,9 @@
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.49591503" weight="0.32740214" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.50408494" side_tool="true" weight="0.3283582" />
-      <window_info anchor="bottom" id="Python Console" order="2" weight="0.3283582" />
+      <window_info anchor="bottom" id="Python Console" order="2" weight="0.32740214" />
       <window_info anchor="bottom" id="Message" order="3" />
-      <window_info anchor="bottom" id="Find" order="4" />
+      <window_info anchor="bottom" id="Find" order="4" weight="0.3291815" />
       <window_info anchor="bottom" id="Version Control" order="5" sideWeight="0.49754903" weight="0.27402136" />
       <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.32740214" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
@@ -537,16 +623,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/get-pip.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/get-pip.py" />
     <entry file="file://$USER_HOME$/Downloads/get-pip.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -567,13 +644,7 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/cozmo-song-match-master/song_match/song/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#135#157#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/cozmo-song-match-master/song_match/config.py">
       <provider selected="true" editor-type-id="text-editor" />
@@ -586,113 +657,81 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cozmo-song-match-master/song_match/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#164#194#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/cozmo-song-match-master/song_match/game_constants.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/cozmo-song-match-master/song_match/effect/effect.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cozmo-song-match-master/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/cozmo-song-match-master/song_match/song_robot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="228">
+          <caret line="265" selection-start-line="265" selection-end-line="265" />
           <folding>
             <element signature="e#68#100#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cozmo-song-match-master/song_match/song/song.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="47" column="37" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
+          <folding>
+            <element signature="e#62#97#0" expanded="true" />
+            <marker date="1542844537688" expanded="true" signature="818:906" ph="..." />
+            <marker date="1542844537688" expanded="true" signature="1361:1399" ph="..." />
+            <marker date="1542844537688" expanded="true" signature="5558:5563" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/cozmo-song-match-master/song_match/song_match.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="116" column="27" lean-forward="true" selection-start-line="116" selection-start-column="27" selection-end-line="116" selection-end-column="27" />
+        <state relative-caret-position="68">
+          <caret line="98" column="91" selection-start-line="98" selection-start-column="91" selection-end-line="98" selection-end-column="91" />
           <folding>
             <element signature="e#68#93#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cozmo-song-match-master/song_match/effect/effect.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/sound_effects.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="68" column="82" lean-forward="true" selection-start-line="68" selection-start-column="82" selection-end-line="68" selection-end-column="82" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cozmo-song-match-master/song_match/song/song.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="174" lean-forward="true" selection-start-line="174" selection-end-line="174" />
-          <folding>
-            <element signature="e#62#97#0" expanded="true" />
-            <marker date="1542417910394" expanded="true" signature="5527:5586" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cozmo-song-match-master/song_match/song/instrument.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+        <state relative-caret-position="187">
+          <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
           <folding>
             <marker date="1542760657818" expanded="true" signature="486:547" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cozmo-song-match-master/song_match/song/songs/mary_had_a_little_lamb.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="24" column="8" lean-forward="true" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="41" />
-          <folding>
-            <element signature="e#100#123#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cozmo-song-match-master/song_match/song/songs/hot_cross_buns.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="25" column="8" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="26" selection-end-column="31" />
-          <folding>
-            <element signature="e#86#109#0" expanded="true" />
-            <marker date="1542760658242" expanded="true" signature="666:746" ph="..." />
-            <marker date="1542760658242" expanded="true" signature="971:977" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cozmo-song-match-master/song_match/song/songs/rain_rain_go_away.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
-          <folding>
-            <element signature="e#91#114#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cozmo-song-match-master/song_match/song/note.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
+        <state relative-caret-position="289">
           <caret line="32" column="59" lean-forward="true" selection-start-line="32" selection-start-column="59" selection-end-line="32" selection-end-column="59" />
           <folding>
             <element signature="e#62#92#0" expanded="true" />
@@ -700,12 +739,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cozmo-song-match-master/main.py">
+    <entry file="file://$PROJECT_DIR$/cozmo-song-match-master/song_match/song/songs/hot_cross_buns.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="49" column="17" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
+        <state relative-caret-position="102">
+          <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#86#109#0" expanded="true" />
+            <marker date="1542846918866" expanded="true" signature="611:616" ph="..." />
+            <marker date="1542846918866" expanded="true" signature="859:865" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cozmo-song-match-master/song_match/song/songs/rain_rain_go_away.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="24" column="63" selection-start-line="24" selection-start-column="63" selection-end-line="24" selection-end-column="63" />
+          <folding>
+            <element signature="e#91#114#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cozmo-song-match-master/song_match/sound_effects/sound_effects.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="78" column="45" lean-forward="true" selection-start-line="78" selection-start-column="45" selection-end-line="78" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <marker date="1542846242298" expanded="true" signature="1567:1572" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cozmo-song-match-master/song_match/song/songs/mary_had_a_little_lamb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="15" column="10" lean-forward="true" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+          <folding>
+            <element signature="e#100#123#0" expanded="true" />
           </folding>
         </state>
       </provider>
