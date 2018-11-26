@@ -20,7 +20,8 @@ MEDIUM = 8
 LONG = 16
 
 RANDOM_SEQUENCE_MIN_BOUND = 5
-RANDOM_SEQUENCE_MAX_BOUND = 15
+RANDOM_SEQUENCE_MAX_BOUND = 10
+
 
 class RandomSong(Song):
 
@@ -35,12 +36,14 @@ class RandomSong(Song):
     @property
     def _notes(self) -> List[Note]:
         instrument = self.get_instrument().get_instrument_str()
-        print("RandomSong: setting the list of notes")
 
         if not self.is_notes_set:
-            self.random_note_one = self.random_note()
-            self.random_note_two = self.random_note()
-            self.random_note_three = self.random_note()
+            while self.random_note_one == self.random_note_two or self.random_note_one == self.random_note_three \
+                    or self.random_note_two == self.random_note_three:
+                    self.random_note_one = self.random_note()
+                    self.random_note_two = self.random_note()
+                    self.random_note_three = self.random_note()
+
             self.is_notes_set = True
 
         return [
@@ -64,14 +67,11 @@ class RandomSong(Song):
             self.is_seq_set = True
             choice_sequence = [first_note, second_note, third_note]
 
-            # Determine a random length for the sequence in the range 5-15
+            # Determine a random length for the sequence in the range 5-10
             sequence_len = random.randint(RANDOM_SEQUENCE_MIN_BOUND, RANDOM_SEQUENCE_MAX_BOUND)
 
             for x in range(0, sequence_len):
                 self.seq.append(random.choice(choice_sequence))
-
-            for x in range(0, sequence_len):
-                print("\tRandom choice note at index ", x, " is ", self.seq[x])
 
         print("\tRandomSong(): The first note is ", first_note, "\n\tThe second note is ", second_note,
               "\n\tThe third note is ", third_note, "\n\tThe sequence length is ", self.seq.__len__())

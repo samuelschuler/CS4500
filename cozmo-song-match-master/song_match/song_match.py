@@ -24,6 +24,8 @@ from .song import Note
 from .song import Song
 from .song_robot import SongRobot
 
+COZMO_TURN = "My turn"
+
 
 class SongMatch:
     """Main game class."""
@@ -51,6 +53,7 @@ class SongMatch:
         :type robot: :class:`~cozmo.robot.Robot`
         :return: None
         """
+
         print("In song_match.play")
         self._song_robot = SongRobot(robot, self._song)
         self._note_cubes = NoteCubes.of(self._song_robot)
@@ -71,6 +74,7 @@ class SongMatch:
         num_players = self._num_players
         if num_players is None:
             num_players = await self.__get_number_of_players(song_robot)
+            print("num_players is ", num_players)
         return self.__get_players(num_players)
 
     @staticmethod
@@ -93,7 +97,6 @@ class SongMatch:
 
     async def __init_game_loop(self) -> None:
         current_position = STARTING_POSITION
-        print("in init game loop")
         print("the song's instrument is ", self._song.get_instrument().get_instrument_str())
 
         while self._song.is_not_finished(current_position):
@@ -131,7 +134,13 @@ class SongMatch:
 
             if tapped_cube.note != correct_note:
                 self._players[player_index].num_wrong += 1
+
                 await self.__play_wrong_note_effect(tapped_cube.cube_id)
+
+                if self._players[player_index].num_wrong == MAX_STRIKES:
+                    await self._song_robot.say_text(str(self._players[player_index]) + ' you are out!')\
+                        .wait_for_completed()
+
                 return
 
             num_notes_played += 1
@@ -144,13 +153,24 @@ class SongMatch:
         self._prevent_tap = True
         return result
 
+    # Have cozmo say which player's turn it is #
     async def __player_turn_prompt(self, player: Player) -> None:
+        print("the prompt is: ", player.players_turn())
+
+        player.id_to_str()
+
         if len(self._players) > 1:
-            prompt = str(player)
+            prompt = player.players_turn()
+            await self._song_robot.say_text(prompt).wait_for_completed()
+        else:
+            prompt = player.players_turn()
             await self._song_robot.say_text(prompt).wait_for_completed()
 
     async def __wait_for_cozmo_to_match_notes(self, current_position: int) -> None:
         if self._song_robot.num_wrong < MAX_STRIKES:
+            # Have Cozmo say that its his turn #
+            await self._song_robot.say_text(COZMO_TURN).wait_for_completed()
+
             notes = self._song.get_sequence_slice(current_position)
             played_correct_sequence, note = await self._song_robot.play_notes(notes, with_error=True)
             if played_correct_sequence:

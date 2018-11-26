@@ -38,6 +38,7 @@ class MaryHadALittleLamb(Song):
         e_quarter = Note('E4', instrument, QUARTER_NOTE)
         d_half = Note('D4', instrument, HALF_NOTE)
         e_half = Note('E4', instrument, HALF_NOTE)
+
         return [
             e_quarter, d_quarter, c_quarter, d_quarter, e_quarter,
             e_quarter, e_half, d_quarter, d_quarter, d_half,

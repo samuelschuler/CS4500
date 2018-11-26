@@ -117,14 +117,14 @@ class SongRobot:
         :param cube_id: :attr:`~cozmo.objects.LightCube.cube_id` to turn to.
         :return: None
         """
-        timeout = 0.1
+        timeout = 0.001
         try:
             cube = await self.world.wait_for_observed_light_cube(timeout=timeout)
         except TimeoutError:
             cube = None  # Didn't find cube
 
         while cube is None or cube.cube_id != cube_id:
-            await self._robot.turn_in_place(degrees(30)).wait_for_completed()
+            await self._robot.turn_in_place(degrees(-10)).wait_for_completed()
 
             try:
                 cube = await self.world.wait_for_observed_light_cube(timeout=timeout)
