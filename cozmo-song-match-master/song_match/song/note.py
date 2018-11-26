@@ -22,6 +22,7 @@ class Note:
     def __init__(self, note: str, instrument: str, duration: int = QUARTER_NOTE):
         self.duration = duration
         self.note = note
+        self.instrument = instrument
 
         # Add a instrument member variable, such as self.instrument,
         # so we can invoke get_note_sound_path(note) and that function will know

@@ -22,6 +22,7 @@ from .player import Player
 from .song import MaryHadALittleLamb
 from .song import Note
 from .song import Song
+from .song import Instrument
 from .song_robot import SongRobot
 
 COZMO_WELCOME_MESSAGE = "Welcome to Song Match"

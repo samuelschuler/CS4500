@@ -5,6 +5,7 @@
 
 from .song import Note
 from .song import Song
+from .song import Instrument
 from .songs import HotCrossBuns
 from .songs import MaryHadALittleLamb
 from .songs import RainRainGoAway
