@@ -21,6 +21,9 @@ class Instrument:
     def get_instrument_str(self) -> str:
         return self.instrument
 
+    def set_instrument(self) -> None:
+        self.instrument = self.get_random_instrument()
+
     def get_random_instrument(self) -> str:
         random_instrument_index = random.randint(PIANO_INDEX, SAXAPHONE_INDEX)
 

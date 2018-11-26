@@ -22,8 +22,12 @@ class HotCrossBuns(Song):
     """Hot Cross Buns"""
 
     @property
+    def _instrument(self) -> Instrument:
+        self._instrument.set_instrument()
+        return self._instrument
+
+    @property
     def _notes(self) -> List[Note]:
-        print("The instrument is ", self._instrument.get_instrument_str(), " \n")
         return [
             Note('G3'),
             Note('A3'),
