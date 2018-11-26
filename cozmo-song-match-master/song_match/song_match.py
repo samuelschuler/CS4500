@@ -24,7 +24,9 @@ from .song import Note
 from .song import Song
 from .song_robot import SongRobot
 
+COZMO_WELCOME_MESSAGE = "Welcome to Song Match"
 COZMO_TURN = "My turn"
+COZMO_GAME_START = "Starting the game"
 
 
 class SongMatch:
@@ -54,11 +56,9 @@ class SongMatch:
         :return: None
         """
 
-        print("In song_match.play")
         self._song_robot = SongRobot(robot, self._song)
         self._note_cubes = NoteCubes.of(self._song_robot)
         self._effect_factory = EffectFactory(self._song_robot)
-        print("song_match: setup song, notes, and effect factory")
         await self.__setup()
         await self.__init_game_loop()
 
@@ -68,13 +68,16 @@ class SongMatch:
         CubeMat.order_cubes_by_position(self._song_robot)
         self._song_robot.world.add_event_handler(EvtObjectTapped, self.__tap_handler)
         self._note_cubes.turn_on_lights()
+
+        # Have Cozmo introduce the game #
+        await self._song_robot.say_text(COZMO_WELCOME_MESSAGE).wait_for_completed()
+
         self._players = await self.__setup_players(self._song_robot)
 
     async def __setup_players(self, song_robot: SongRobot) -> List[Player]:
         num_players = self._num_players
         if num_players is None:
             num_players = await self.__get_number_of_players(song_robot)
-            print("num_players is ", num_players)
         return self.__get_players(num_players)
 
     @staticmethod
@@ -99,6 +102,9 @@ class SongMatch:
         current_position = STARTING_POSITION
         print("the song's instrument is ", self._song.get_instrument().get_instrument_str())
 
+        # Have Cozmo 'announce' when the game is starting #
+        await self._song_robot.say_text(COZMO_GAME_START).wait_for_completed()
+
         while self._song.is_not_finished(current_position):
             await self.__play_round_transition_effect()
 
@@ -116,6 +122,11 @@ class SongMatch:
             current_position = self.__update_position(current_position)
 
         await self.__play_end_game_results()
+
+        # Here, we could prompt the user and ask if they would like to play again,
+        # possibly using the option_prompter class and having two cubes represent YES or NO.
+        # Would need to make sure that cozmo only points to those two cubes.
+        # Need to reset certain variables #
 
     async def __wait_for_players_to_match_notes(self, current_position: int) -> None:
         for i, player in enumerate(self._players):
