@@ -23,10 +23,7 @@ class HotCrossBuns(Song):
 
     @property
     def _notes(self) -> List[Note]:
-<<<<<<< HEAD
-=======
         instrument = self.get_instrument().get_instrument_str()
->>>>>>> 5ceb25a5b2c8c0f6cc9063e9a9ef8290a3de6889
         return [
             Note('G3', instrument),
             Note('A3', instrument),
