@@ -10,6 +10,17 @@ class InvalidNote(ValueError):
         return 'Invalid note "' + note + '".'
 
 
+class InvalidNoteInstrument(ValueError):
+    """Raise if an invalid note is provided for a given instrument."""
+    def __init__(self, note):
+        message = self._message(note, note.instrument)
+        super(InvalidNoteInstrument, self).__init__(message)
+
+    @staticmethod
+    def _message(note: str, instrument: str) -> str:
+        return 'Invalid note "' + note + '" for the instrument "' + instrument + '".'
+
+
 class MixerNotInitialized(ValueError):
     """Raise if constructing a :class:`~song_match.song.note.Note` instance before initializing the mixer."""
 

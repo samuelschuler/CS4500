@@ -1,10 +1,10 @@
 import random
 
 PIANO = "piano"
-FLUTE = "flute"
+CLARINET = "clarinet"
 SAXAPHONE = "saxaphone"
 PIANO_INDEX = 1
-FLUTE_INDEX = 2
+CLARINET_INDEX = 2
 SAXAPHONE_INDEX = 3
 
 
@@ -12,7 +12,7 @@ class Instrument:
     def __init__(self):
         self.instrument_dictionary = {
             PIANO_INDEX: PIANO,
-            FLUTE_INDEX: FLUTE,
+            CLARINET_INDEX: CLARINET,
             SAXAPHONE_INDEX: SAXAPHONE
         }
 

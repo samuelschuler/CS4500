@@ -6,5 +6,6 @@
 from .song import HotCrossBuns
 from .song import MaryHadALittleLamb
 from .song import RainRainGoAway
+from .song import RandomSong
 from .song import Song
 from .song_match import SongMatch

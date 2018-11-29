@@ -21,25 +21,24 @@ class MaryHadALittleLamb(Song):
     """Mary Had a Little Lamb"""
 
     @property
-    def _instrument(self) -> Instrument:
-        self._instrument.set_instrument()
-        return self._instrument
-
-    @property
     def _notes(self) -> List[Note]:
+        instrument = self.get_instrument().get_instrument_str()
         return [
-            Note('C4'),
-            Note('D4'),
-            Note('E4')
+            Note('C4', instrument),
+            Note('D4', instrument),
+            Note('E4', instrument)
         ]
 
     @property
     def _sequence(self) -> List[Note]:
-        c_quarter = Note('C4', QUARTER_NOTE)
-        d_quarter = Note('D4', QUARTER_NOTE)
-        e_quarter = Note('E4', QUARTER_NOTE)
-        d_half = Note('D4', HALF_NOTE)
-        e_half = Note('E4', HALF_NOTE)
+        instrument = self.get_instrument().get_instrument_str()
+        print("returning note sequence: instrument is", instrument)
+        c_quarter = Note('C4', instrument, QUARTER_NOTE)
+        d_quarter = Note('D4', instrument, QUARTER_NOTE)
+        e_quarter = Note('E4', instrument, QUARTER_NOTE)
+        d_half = Note('D4', instrument, HALF_NOTE)
+        e_half = Note('E4', instrument, HALF_NOTE)
+
         return [
             e_quarter, d_quarter, c_quarter, d_quarter, e_quarter,
             e_quarter, e_half, d_quarter, d_quarter, d_half,

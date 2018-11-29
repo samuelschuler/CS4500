@@ -22,27 +22,27 @@ class HotCrossBuns(Song):
     """Hot Cross Buns"""
 
     @property
-    def _instrument(self) -> Instrument:
-        self._instrument.set_instrument()
-        return self._instrument
-
-    @property
     def _notes(self) -> List[Note]:
+<<<<<<< HEAD
+=======
+        instrument = self.get_instrument().get_instrument_str()
+>>>>>>> 5ceb25a5b2c8c0f6cc9063e9a9ef8290a3de6889
         return [
-            Note('G3'),
-            Note('A3'),
-            Note('B3')
+            Note('G3', instrument),
+            Note('A3', instrument),
+            Note('B3', instrument)
         ]
 
     @property
     def _sequence(self) -> List[Note]:
         # Defining the notes for hot cross buns
-
-        a_eighth = Note('A3', EIGHTH_NOTE)
-        g_eighth = Note('G3', EIGHTH_NOTE)
-        b_quarter = Note('B3', QUARTER_NOTE)
-        a_quarter = Note('A3', QUARTER_NOTE)
-        g_half = Note('G3', HALF_NOTE)
+        instrument = self.get_instrument().get_instrument_str()
+        print("returning note sequence: instrument is", instrument)
+        a_eighth = Note('A3', instrument, EIGHTH_NOTE)
+        g_eighth = Note('G3', instrument, EIGHTH_NOTE)
+        b_quarter = Note('B3', instrument, QUARTER_NOTE)
+        a_quarter = Note('A3', instrument, QUARTER_NOTE)
+        g_half = Note('G3', instrument, HALF_NOTE)
 
         return [
             b_quarter, a_quarter, g_half,
