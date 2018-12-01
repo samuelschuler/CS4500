@@ -1,4 +1,4 @@
-"""Module containing :class:`~song_match.song.songs.mary_had_a_little_lamb.MaryHadALittleLamb`."""
+
 
 from typing import List
 
