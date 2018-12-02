@@ -1,59 +1,57 @@
 
+"""ring_around_the_rosie.py: ring around song for song match"""
+
 from typing import List
 
 from cozmo.lights import Light
 
-
 from song_match.cube.lights import BLUE_LIGHT
 from song_match.cube.lights import CYAN_LIGHT
-from song_match.cube.lights import GREEN_LIGHT
+from song_match.cube.lights import PINK_LIGHT
 from song_match.song import Song
-from song_match.song.note import EIGHTH_NOTE
-from song_match.song.note import HALF_NOTE
+from song_match.song.instrument import Instrument
 from song_match.song.note import Note
 from song_match.song.note import QUARTER_NOTE
 
-MEDIUM = 4
+MEDIUM = 6
 LONG = 12
 
 
-class RowRowRow(Song):
-    """Row row row your boat"""
+class RingAround(Song):
+    """Ring around the rosie song """
+
+    @property
+    def _instrument(self) -> Instrument:
+        return Instrument.get_instrument()
 
     @property
     def _notes(self) -> List[Note]:
         instrument = self.get_instrument().get_instrument_str()
         return [
-            Note('C4', instrument),
             Note('D4', instrument),
-            Note('E4', instrument),
-            Note('F4', instrument),
-            Note('G4', instrument)
+            Note('B4', instrument),
+            Note('E4', instrument)
         ]
 
     @property
     def _sequence(self) -> List[Note]:
+        # Defining notes for it's raining song
         instrument = self.get_instrument().get_instrument_str()
-        c_quarter = Note('C4', instrument, QUARTER_NOTE)
         d_quarter = Note('D4', instrument, QUARTER_NOTE)
+        b_quarter = Note('B4', instrument, QUARTER_NOTE)
         e_quarter = Note('E4', instrument, QUARTER_NOTE)
-        f_quarter = Note('F4', instrument, QUARTER_NOTE)
-        g_quarter = Note('G4', instrument, QUARTER_NOTE)
-
         return [
-            c_quarter, c_quarter, c_quarter, d_quarter,
-            e_quarter, e_quarter, d_quarter, e_quarter,
-            f_quarter, g_quarter, c_quarter, c_quarter,
-            c_quarter, g_quarter, g_quarter, g_quarter,
-            e_quarter, e_quarter, e_quarter, c_quarter,
-            c_quarter, c_quarter, c_quarter, g_quarter,
-            f_quarter, e_quarter, d_quarter, c_quarter,
+            d_quarter, d_quarter, b_quarter,
+            e_quarter, d_quarter, b_quarter,
+            b_quarter, d_quarter, d_quarter,
+            b_quarter, e_quarter, d_quarter,
+            b_quarter, d_quarter, b_quarter,
         ]
 
     @property
     def _cube_lights(self) -> List[Light]:
         return [
-            GREEN_LIGHT,
+            PINK_LIGHT,
             BLUE_LIGHT,
             CYAN_LIGHT
         ]

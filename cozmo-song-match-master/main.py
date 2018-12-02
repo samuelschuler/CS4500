@@ -14,7 +14,6 @@ from song_match import SongMatch
 
 
 def main():
-    print("in main")
     song_match_kwargs = get_song_match_kwargs()
     song_match = SongMatch(**song_match_kwargs)
     cozmo.run_program(song_match.play)

@@ -2,6 +2,7 @@
 
 from asyncio import sleep
 from sys import exit
+import random
 from typing import Callable, List
 
 from cozmo.anim import AnimationTrigger
@@ -17,9 +18,13 @@ from .effect import EffectFactory
 from .game_constants import MAX_STRIKES
 from .game_constants import STARTING_POSITION
 from .game_constants import TIME_IN_BETWEEN_PLAYERS_AND_COZMO
+from .game_constants import ONE_PLAYER, TWO_PLAYERS, THREE_PLAYERS
+from .game_constants import COZMO_PLAY_AGAIN, PLAY_AGAIN_YES, PLAY_AGAIN_NO, COZMO_END_GAME, COZMO_NEW_GAME
 from .option_prompter import OptionPrompter
 from .player import Player
 from .song import MaryHadALittleLamb
+from .song import RainRainGoAway
+from .song import HotCrossBuns
 from .song import Note
 from .song import Song
 from .song import Instrument
@@ -44,6 +49,8 @@ class SongMatch:
 
         self._prevent_tap = True  # Flag to prevent player from interrupting game by tapping cubes
         self._played_final_round = False  # Keep track of whether the final round has been played
+        self._game_over = False
+        self._keep_playing = True
 
         init_mixer()
 
@@ -57,11 +64,16 @@ class SongMatch:
         :return: None
         """
 
-        self._song_robot = SongRobot(robot, self._song)
-        self._note_cubes = NoteCubes.of(self._song_robot)
-        self._effect_factory = EffectFactory(self._song_robot)
-        await self.__setup()
-        await self.__init_game_loop()
+        while self._keep_playing is True:
+            self._song_robot = SongRobot(robot, self._song)
+            self._note_cubes = NoteCubes.of(self._song_robot)
+            self._effect_factory = EffectFactory(self._song_robot)
+            await self.__setup()
+            await self.__init_game_loop()
+            # await self._song_robot.turn_back_to_center(self) #
+            play_again = await self.__get_play_again_option(self._song_robot)
+            self._keep_playing = self.__get_play_again(play_again)
+            self.reset_game()
 
     async def __setup(self) -> None:
         print("in song_match.setup")
@@ -81,16 +93,45 @@ class SongMatch:
             num_players = await self.__get_number_of_players(song_robot)
         return self.__get_players(num_players)
 
+    def reset_game(self):
+        self._game_over = False
+        self._players = None
+        self._played_final_round = False
+        self.get_new_song()
+        self._song_robot = None
+        self._note_cubes = None
+        self._effect_factory = None
+
+    def get_new_song(self):
+        song_choices = [MaryHadALittleLamb(), HotCrossBuns(), RainRainGoAway()]
+        current_song = self._song
+
+        while self._song is current_song:
+            self._song = random.choice(song_choices)
+
     @staticmethod
     async def __get_number_of_players(song_robot: SongRobot) -> int:
         prompt = 'How many players?'
         options = ['One?', 'Two?', 'Three?']
         option_prompter = OptionPrompter(song_robot)
-        return await option_prompter.get_option(prompt, options)
+        return await option_prompter.get_option(prompt, options, [ONE_PLAYER, TWO_PLAYERS, THREE_PLAYERS])
 
     @staticmethod
     def __get_players(num_players: int) -> List[Player]:
         return [Player(i) for i in range(1, num_players + 1)]
+
+    @staticmethod
+    async def __get_play_again_option(song_robot: SongRobot) -> int:
+        options = [PLAY_AGAIN_YES, PLAY_AGAIN_NO, '']
+        option_prompter = OptionPrompter(song_robot)
+        return await option_prompter.get_option(COZMO_PLAY_AGAIN, options, [COZMO_NEW_GAME, COZMO_END_GAME])
+
+    @staticmethod
+    def __get_play_again(play_again: int) -> bool:
+        if play_again == 1:
+            return True
+        else:
+            return False
 
     async def __tap_handler(self, evt, obj=None, tap_count=None, **kwargs) -> None:
         if self._prevent_tap:
@@ -106,7 +147,7 @@ class SongMatch:
         # Have Cozmo 'announce' when the game is starting #
         await self._song_robot.say_text(COZMO_GAME_START).wait_for_completed()
 
-        while self._song.is_not_finished(current_position):
+        while self._song.is_not_finished(current_position) and self._game_over is False:
             await self.__play_round_transition_effect()
 
             notes = self._song.get_sequence_slice(current_position)
@@ -116,7 +157,8 @@ class SongMatch:
 
             await sleep(TIME_IN_BETWEEN_PLAYERS_AND_COZMO)
 
-            await self.__wait_for_cozmo_to_match_notes(current_position)
+            if self._game_over is False:
+                await self.__wait_for_cozmo_to_match_notes(current_position)
 
             await self.__check_for_game_over()
 
@@ -196,8 +238,9 @@ class SongMatch:
         all_players = self._players + [self._song_robot]
         out_of_game_players = self.__get_out_of_game_players(all_players)
         num_of_players_out_of_game = len(out_of_game_players)
-        if num_of_players_out_of_game >= len(self._players):
-            await self.__play_end_game_results()
+        if num_of_players_out_of_game >= len(self._players) and self._game_over is False:
+            # await self.__play_end_game_results()
+            self._game_over = True
 
     @staticmethod
     def __get_out_of_game_players(all_players: list) -> list:
@@ -209,7 +252,11 @@ class SongMatch:
         await self.__play_notes(self._song.get_sequence())
         await animation.wait_for_completed()
         sleep(1)
+<<<<<<< HEAD
         exit(0) 
+=======
+        # exit(0)
+>>>>>>> baeb4c30e66912479b664fde8e5119730b2ed3c3
 
     async def __get_winners(self) -> List[Player]:
         return [player for player in self._players if player.did_win]
