@@ -4,11 +4,12 @@ from typing import List
 
 from cozmo.objects import EvtObjectTapped
 from cozmo.objects import LightCubeIDs
-
+from song_match.cube.lights import WHITE_LIGHT
 from .cube import NoteCubes
 from .cube_mat import CubeMat
 from .song_robot import SongRobot
 from .sound_effects import play_collect_point_sound
+from .game_constants import COZMO_SPEECH_DURATION, COZMO_VOICE_PITCH
 
 
 class OptionPrompter:
@@ -32,18 +33,21 @@ class OptionPrompter:
         """
         assert len(options) == 3
 
-        await self._song_robot.say_text(prompt).wait_for_completed()
+        note_cubes = NoteCubes.of(self._song_robot)
+
+        await self._song_robot.say_text(prompt, COZMO_SPEECH_DURATION).wait_for_completed()
         sleep(1)
         for i, cube_id in enumerate(LightCubeIDs):
             prompt = options[i]
 
             if prompt != '':
-                await self._song_robot.say_text(prompt).wait_for_completed()
+                await self._song_robot.say_text(prompt, COZMO_SPEECH_DURATION).wait_for_completed()
                 mat_position = CubeMat.cube_id_to_position(cube_id)
                 action = await self._song_robot.tap_cube(mat_position)
                 await action.wait_for_completed()
+                await note_cubes.flash_single_cube(mat_position, WHITE_LIGHT)
 
-        note_cubes = NoteCubes.of(self._song_robot)
+        # note_cubes = NoteCubes.of(self._song_robot)
         note_cubes.start_light_chasers()
 
         # Try to make cozmo turn toward the cube that was tapped here?
@@ -52,6 +56,8 @@ class OptionPrompter:
         cube_id = event.obj.cube_id
         note_cubes.stop_light_chasers()
         play_collect_point_sound()
+        await note_cubes.flash_single_cube_green(cube_id)
+        await sleep(1)
 
         print("The cube id is ", CubeMat.cube_id_to_position(cube_id))
 
@@ -62,20 +68,12 @@ class OptionPrompter:
         await asyncio.sleep(1)
 
         if CubeMat.cube_id_to_position(cube_id) == 1:
-            print("cube id is 1, 1 player")
-            await self._song_robot.say_text(response[0]).wait_for_completed()
-            # await self._song_robot.say_text(ONE_PLAYER).wait_for_completed()
+            await self._song_robot.say_text(response[0], COZMO_SPEECH_DURATION, COZMO_VOICE_PITCH).wait_for_completed()
         elif CubeMat.cube_id_to_position(cube_id) == 2:
-            print("cube id is 2, 2 player")
-            await self._song_robot.say_text(response[1]).wait_for_completed()
-            # await self._song_robot.say_text(TWO_PLAYERS).wait_for_completed()
+            await self._song_robot.say_text(response[1], COZMO_SPEECH_DURATION, COZMO_VOICE_PITCH).wait_for_completed()
         elif CubeMat.cube_id_to_position(cube_id) == 3 and response.__len__() == 3:
-            print("cube id is 3, 3 player")
-            await self._song_robot.say_text(response[2]).wait_for_completed()
-            # await self._song_robot.say_text(THREE_PLAYERS).wait_for_completed()
+            await self._song_robot.say_text(response[2], COZMO_SPEECH_DURATION, COZMO_VOICE_PITCH).wait_for_completed()
 
-        await note_cubes.flash_single_cube_green(cube_id)
-        await sleep(1)
         return CubeMat.cube_id_to_position(cube_id)
 
     # async def get_players_option(self, prompt: str, options: List[str]):

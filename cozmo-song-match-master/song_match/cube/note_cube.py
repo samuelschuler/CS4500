@@ -46,6 +46,11 @@ class NoteCube:
         await sleep(sleep_duration)
         self.turn_on_light()
 
+    async def hold_cube_light(self) -> None:
+        self._cube.set_lights_off()
+        await sleep(0.5)
+        self.turn_on_light()
+
     def turn_on_light(self) -> None:
         """Turn on the light for the cube assigned in :class:`~song_match.song.song.Song`.
         

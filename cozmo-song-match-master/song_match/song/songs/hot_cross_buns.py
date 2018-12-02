@@ -22,6 +22,10 @@ class HotCrossBuns(Song):
     """Hot Cross Buns"""
 
     @property
+    def _song_id(self) -> str:
+        return 'hcb'
+
+    @property
     def _notes(self) -> List[Note]:
         instrument = self.get_instrument().get_instrument_str()
         return [

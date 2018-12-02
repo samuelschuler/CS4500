@@ -7,6 +7,8 @@ import cozmo
 from song_match import HotCrossBuns
 from song_match import MaryHadALittleLamb
 from song_match import RainRainGoAway
+from song_match import ItsRaining
+from song_match import RingAround
 from song_match import RandomSong
 from song_match import Song
 from song_match import SongMatch
@@ -68,6 +70,8 @@ def get_songs() -> Dict[str, Song]:
         'hcb': HotCrossBuns(),
         'mhall': MaryHadALittleLamb(),
         'rrga': RainRainGoAway(),
+        'ir': ItsRaining(),
+        'ra': RingAround(),
         'random': RandomSong()
     }
 
