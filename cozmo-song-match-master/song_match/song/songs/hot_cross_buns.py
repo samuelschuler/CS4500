@@ -38,7 +38,6 @@ class HotCrossBuns(Song):
     def _sequence(self) -> List[Note]:
         # Defining the notes for hot cross buns
         instrument = self.get_instrument().get_instrument_str()
-        print("returning note sequence: instrument is", instrument)
         a_eighth = Note('A3', instrument, EIGHTH_NOTE)
         g_eighth = Note('G3', instrument, EIGHTH_NOTE)
         b_quarter = Note('B3', instrument, QUARTER_NOTE)

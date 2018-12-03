@@ -106,7 +106,6 @@ class SongMatch:
         exit(0)
 
     async def __setup(self) -> None:
-        print("in song_match.setup")
         await self._song_robot.world.wait_until_num_objects_visible(3, object_type=LightCube)
         CubeMat.order_cubes_by_position(self._song_robot)
         self._song_robot.world.add_event_handler(EvtObjectTapped, self.__tap_handler)
@@ -120,8 +119,6 @@ class SongMatch:
         if self._mode is EAR_TRAINING_MODE:
             self._song = RandomSong()
             self._song_robot._song = self._song
-        print("The mode is ", self._mode)
-        print("\tThe song id is ", self._song.get_id())
 
         if self._mode is not TUTORIAL_MODE:
             self._players = await self.__setup_players(self._song_robot)
@@ -200,8 +197,6 @@ class SongMatch:
 
     async def __init_game_loop(self) -> None:
         current_position = STARTING_POSITION
-        print("the song's instrument is ", self._song.get_instrument().get_instrument_str())
-
         # Have Cozmo 'announce' when the game is starting #
         await self._song_robot.say_text(COZMO_GAME_START, COZMO_SPEECH_DURATION).wait_for_completed()
 
@@ -321,8 +316,6 @@ class SongMatch:
 
     # Have cozmo say which player's turn it is #
     async def __player_turn_prompt(self, player: Player) -> None:
-        print("the prompt is: ", player.players_turn())
-
         player.id_to_str()
 
         if len(self._players) > 1:

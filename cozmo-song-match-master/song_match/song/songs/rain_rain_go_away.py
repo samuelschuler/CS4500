@@ -36,7 +36,6 @@ class RainRainGoAway(Song):
     @property
     def _sequence(self) -> List[Note]:
         instrument = self.get_instrument().get_instrument_str()
-        print("returning note sequence: instrument is", instrument)
         g_quarter = Note('G5', instrument, QUARTER_NOTE)
         e_quarter = Note('E5', instrument, QUARTER_NOTE)
         a_quarter = Note('A5', instrument, QUARTER_NOTE)

@@ -27,8 +27,6 @@ def get_song_match_kwargs() -> dict:
     song_key = args['song_key']
     song = songs[song_key]
 
-    print("The song is ", song_key)
-
     num_players = args['num_players']
 
     return {

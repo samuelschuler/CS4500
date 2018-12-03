@@ -84,7 +84,6 @@ def __get_game_sound_path(name: str) -> str:
 
 def __get_sound_path(name: str, sound_effect_package: str) -> str:
     # This gets the file soundpath for a note  #
-    # print("__get_sound_path: name is ", name, " sound_effect_package is ", sound_effect_package)#
     filename = name + '.wav'
     path = os.path.join(ROOT_DIR, 'sound_effects', sound_effect_package, filename)
 

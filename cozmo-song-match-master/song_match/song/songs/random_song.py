@@ -77,9 +77,6 @@ class RandomSong(Song):
             for x in range(0, sequence_len):
                 self.seq.append(random.choice(choice_sequence))
 
-        print("\tRandomSong(): The first note is ", first_note, "\n\tThe second note is ", second_note,
-              "\n\tThe third note is ", third_note, "\n\tThe sequence length is ", self.seq.__len__())
-
         return self.seq
 
     @property

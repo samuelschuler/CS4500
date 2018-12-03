@@ -36,7 +36,6 @@ class MaryHadALittleLamb(Song):
     @property
     def _sequence(self) -> List[Note]:
         instrument = self.get_instrument().get_instrument_str()
-        print("returning note sequence: instrument is", instrument)
         c_quarter = Note('C4', instrument, QUARTER_NOTE)
         d_quarter = Note('D4', instrument, QUARTER_NOTE)
         e_quarter = Note('E4', instrument, QUARTER_NOTE)

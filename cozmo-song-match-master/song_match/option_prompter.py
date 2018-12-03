@@ -59,8 +59,6 @@ class OptionPrompter:
         await note_cubes.flash_single_cube_green(cube_id)
         await sleep(1)
 
-        print("The cube id is ", CubeMat.cube_id_to_position(cube_id))
-
         # Have cozmo turn towards the cube after the user taps the cube to select the number of players #
         action = await self._song_robot.tap_cube(cube_id)
         await action.wait_for_completed()
@@ -75,20 +73,3 @@ class OptionPrompter:
             await self._song_robot.say_text(response[2], COZMO_SPEECH_DURATION, COZMO_VOICE_PITCH).wait_for_completed()
 
         return CubeMat.cube_id_to_position(cube_id)
-
-    # async def get_players_option(self, prompt: str, options: List[str]):
-    #
-    #     cube_id: int
-    #     cube_id = self.get_option(prompt, options)
-    #
-    #     if CubeMat.cube_id_to_position(cube_id) == 1:
-    #         print("cube id is 1, 1 player")
-    #         await self._song_robot.say_text(ONE_PLAYER).wait_for_completed()
-    #     elif CubeMat.cube_id_to_position(cube_id) == 2:
-    #         print("cube id is 2, 2 player")
-    #         await self._song_robot.say_text(TWO_PLAYERS).wait_for_completed()
-    #     elif CubeMat.cube_id_to_position(cube_id) == 3:
-    #         print("cube id is 3, 3 player")
-    #         await self._song_robot.say_text(THREE_PLAYERS).wait_for_completed()
-    #
-    #     return CubeMat.cube_id_to_position
