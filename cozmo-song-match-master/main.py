@@ -7,6 +7,8 @@ import cozmo
 from song_match import HotCrossBuns
 from song_match import MaryHadALittleLamb
 from song_match import RainRainGoAway
+from song_match import ItsRaining
+from song_match import RingAround
 from song_match import RandomSong
 from song_match import Song
 
@@ -58,7 +60,8 @@ def get_song_argument_kwargs() -> dict:
         'type': str,
         'choices': song_choices,
         'help': ('The song to play. ' +
-                 'Hot Cross Buns (hcb), Mary Had A Little Lamb (mhall), or Rain Rain Go Away (rrga).' +
+                 'Hot Cross Buns (hcb), Mary Had A Little Lamb (mhall), Rain Rain Go Away (rrga),'
+                 'It\'s Raining It\'s Pouring (ir), or Ring Around the Rosie (ra).' +
                  'Defaults to a random song.'),
         'default': choice(song_choices)
     }
@@ -69,7 +72,8 @@ def get_songs() -> Dict[str, Song]:
         'hcb': HotCrossBuns(),
         'mhall': MaryHadALittleLamb(),
         'rrga': RainRainGoAway(),
-        'random': RandomSong()
+        'ir': ItsRaining(),
+        'ra': RingAround()
     }
 
 

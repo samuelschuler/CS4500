@@ -257,9 +257,11 @@ class SongRobot:
         """
         return self._robot.play_anim_trigger(animation_trigger, **kwargs)
 
-    def say_text(self, text: str) -> SayText:
+    def say_text(self, text: str, duration=1.0, pitch=0.0, excited_animation=False) -> SayText:
         """Wrapper method for :meth:`~cozmo.robot.Robot.say_text`.
 
         :return: :class:`~cozmo.robot.SayText`
         """
-        return self._robot.say_text(text)
+        # Have Cozmo say the text without movement (False) in Cozmo's voice (True) for the given duration
+        # with the given pitch.
+        return self._robot.say_text(text, excited_animation, True, duration, pitch)

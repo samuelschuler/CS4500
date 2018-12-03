@@ -35,6 +35,9 @@ class Song(ABC):
         self.is_seq_set = False
         self.is_notes_set = False
 
+    def get_id(self) -> str:
+        return self._song_id
+
     def get_note(self, cube_id: int) -> Note:
         """Get the :class:`~song_match.song.note.Note` for a corresponding cube.
 
@@ -172,6 +175,11 @@ class Song(ABC):
     @abstractmethod
     def _notes(self) -> List[Note]:
         """Returns a list of 3 notes in ascending order by pitch."""
+
+    @property
+    @abstractmethod
+    def _song_id(self) -> str:
+        """Returns the ID associated with the song."""
 
     @property
     @abstractmethod

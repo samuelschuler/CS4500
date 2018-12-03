@@ -21,6 +21,10 @@ class RainRainGoAway(Song):
     """Rain Rain Go Away"""
 
     @property
+    def _song_id(self) -> str:
+        return 'rrga'
+
+    @property
     def _notes(self) -> List[Note]:
 <<<<<<< HEAD
 =======

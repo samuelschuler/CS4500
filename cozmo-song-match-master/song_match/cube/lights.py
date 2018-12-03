@@ -36,3 +36,5 @@ CYAN_LIGHT = __get_light(0, 255, 190)
 #: :class:`~cozmo.lights.Light` - Pink light instance.
 PINK_LIGHT = __get_light(255, 0, 255)
 
+WHITE_LIGHT = __get_light(255, 255, 255)
+

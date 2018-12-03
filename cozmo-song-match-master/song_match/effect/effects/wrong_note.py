@@ -21,11 +21,11 @@ class WrongNoteEffect(Effect):
         :param is_player: Whether the player or Cozmo played the wrong note.
         :return: None
         """
-        play_wrong_buzzer_sound()
-        animation = Triggers.MemoryMatchPlayerLoseHand if is_player else Triggers.MemoryMatchCozmoLoseHand
-
         if not is_player:
             await self._song_robot.say_text(COZMO_WRONG).wait_for_completed()
+            
+        play_wrong_buzzer_sound()
+        animation = Triggers.MemoryMatchPlayerLoseHand if is_player else Triggers.MemoryMatchCozmoLoseHand
 
         action = self._song_robot.play_anim_trigger(animation, in_parallel=True)
         await self._note_cubes.flash_single_cube_red(cube_id)
