@@ -16,28 +16,23 @@ from .cube import NoteCubes
 from .cube_mat import CubeMat
 from .effect import EffectFactory
 from .game_constants import MAX_STRIKES
-from .game_constants import COZMO_WELCOME_MESSAGE
-from .game_constants import STARTING_POSITION, TUTORIAL_STARTING_POSITION
-from .game_constants import COZMO_SPEECH_DURATION, COZMO_VOICE_PITCH
-from .game_constants import MODE_PROMPT, TUTORIAL_MODE, EAR_TRAINING_MODE, SONGMATCH_MODE
-from .game_constants import TUTORIAL_MODE_SELECTED, EAR_TRAINING_SELECTED, SONGMATCH_SELECTED
+from .game_constants import STARTING_POSITION
 from .game_constants import TIME_IN_BETWEEN_PLAYERS_AND_COZMO
 from .game_constants import ONE_PLAYER, TWO_PLAYERS, THREE_PLAYERS
-from .game_constants import COZMO_NEXT_ROUND, COZMO_GAME_START, COZMO_TURN, COZMO_TRY_AGAIN, COZMO_DEMONSTRATE
-from .game_constants import COZMO_PLAY_AGAIN, PLAY_AGAIN_YES, PLAY_AGAIN_NO, COZMO_END_GAME, COZMO_NEW_GAME, COZMO_GOOD_JOB
+from .game_constants import COZMO_PLAY_AGAIN, PLAY_AGAIN_YES, PLAY_AGAIN_NO, COZMO_END_GAME, COZMO_NEW_GAME
 from .option_prompter import OptionPrompter
 from .player import Player
 from .song import MaryHadALittleLamb
 from .song import RainRainGoAway
 from .song import HotCrossBuns
-from .song import ItsRaining
-from .song import RingAround
-from .song import RandomSong
 from .song import Note
 from .song import Song
 from .song import Instrument
 from .song_robot import SongRobot
-from song_match.cube.lights import WHITE_LIGHT
+
+COZMO_WELCOME_MESSAGE = "Welcome to Song Match"
+COZMO_TURN = "My turn"
+COZMO_GAME_START = "Starting the game"
 
 
 class SongMatch:
@@ -46,9 +41,6 @@ class SongMatch:
     def __init__(self, song: Song = None, num_players: int = None):
         self._song = MaryHadALittleLamb() if song is None else song
         self._num_players = num_players
-        self._num_games = 0
-        self._game_started = False
-        self._mode = SONGMATCH_MODE # Default to the songmatch game until the user picks an option
 
         self._song_robot = None
         self._note_cubes = None
@@ -57,21 +49,6 @@ class SongMatch:
 
         self._prevent_tap = True  # Flag to prevent player from interrupting game by tapping cubes
         self._played_final_round = False  # Keep track of whether the final round has been played
-
-        self._songs_played = {
-            'hcb': HotCrossBuns(),
-            'mhall': MaryHadALittleLamb(),
-            'rrga': RainRainGoAway(),
-            'ir': ItsRaining(),
-            'ra': RingAround()
-        }
-
-        self._mode_options = {
-            1: TUTORIAL_MODE,
-            2: SONGMATCH_MODE,
-            3: EAR_TRAINING_MODE
-        }
-
         self._game_over = False
         self._keep_playing = True
 
@@ -92,18 +69,11 @@ class SongMatch:
             self._note_cubes = NoteCubes.of(self._song_robot)
             self._effect_factory = EffectFactory(self._song_robot)
             await self.__setup()
-
-            if self._mode is TUTORIAL_MODE:
-                await self.__init_tutorial_loop()
-
             await self.__init_game_loop()
+            # await self._song_robot.turn_back_to_center(self) #
             play_again = await self.__get_play_again_option(self._song_robot)
             self._keep_playing = self.__get_play_again(play_again)
-
-            if self._keep_playing is True:
-                self.reset_game()
-
-        exit(0)
+            self.reset_game()
 
     async def __setup(self) -> None:
         print("in song_match.setup")
@@ -113,25 +83,9 @@ class SongMatch:
         self._note_cubes.turn_on_lights()
 
         # Have Cozmo introduce the game #
-        if self._num_games is 0:
-            await self._song_robot.say_text(COZMO_WELCOME_MESSAGE, COZMO_SPEECH_DURATION).wait_for_completed()
+        await self._song_robot.say_text(COZMO_WELCOME_MESSAGE).wait_for_completed()
 
-        self._mode = await self.__setup_mode(self._song_robot)
-        if self._mode is EAR_TRAINING_MODE:
-            self._song = RandomSong()
-            self._song_robot._song = self._song
-        print("The mode is ", self._mode)
-        print("\tThe song id is ", self._song.get_id())
-
-        if self._mode is not TUTORIAL_MODE:
-            self._players = await self.__setup_players(self._song_robot)
-
-    async def __setup_mode(self, song_robot: SongRobot) -> str:
-        options = [TUTORIAL_MODE, SONGMATCH_MODE, EAR_TRAINING_MODE]
-        option_prompter = OptionPrompter(song_robot)
-        mode = await option_prompter.get_option(MODE_PROMPT, options,
-                                                [TUTORIAL_MODE_SELECTED, SONGMATCH_SELECTED, EAR_TRAINING_SELECTED])
-        return self._mode_options[mode]
+        self._players = await self.__setup_players(self._song_robot)
 
     async def __setup_players(self, song_robot: SongRobot) -> List[Player]:
         num_players = self._num_players
@@ -147,24 +101,13 @@ class SongMatch:
         self._song_robot = None
         self._note_cubes = None
         self._effect_factory = None
-        self._num_games += 1
-        self._game_started = False
 
     def get_new_song(self):
-        song_choices = [MaryHadALittleLamb(), HotCrossBuns(), RainRainGoAway(), RingAround(), ItsRaining()]
+        song_choices = [MaryHadALittleLamb(), HotCrossBuns(), RainRainGoAway()]
         current_song = self._song
 
-        # Delete the song that was previously played from the dictionary.
-        del self._songs_played[self._song.get_id()]
-
-        if len(self._songs_played) is 0:
-            exit(0)
-
         while self._song is current_song:
-            new_song = random.choice(song_choices)
-
-            if new_song.get_id() in self._songs_played:
-                self._song = new_song
+            self._song = random.choice(song_choices)
 
     @staticmethod
     async def __get_number_of_players(song_robot: SongRobot) -> int:
@@ -181,7 +124,6 @@ class SongMatch:
     async def __get_play_again_option(song_robot: SongRobot) -> int:
         options = [PLAY_AGAIN_YES, PLAY_AGAIN_NO, '']
         option_prompter = OptionPrompter(song_robot)
-        await song_robot.turn_back_to_center()
         return await option_prompter.get_option(COZMO_PLAY_AGAIN, options, [COZMO_NEW_GAME, COZMO_END_GAME])
 
     @staticmethod
@@ -203,13 +145,9 @@ class SongMatch:
         print("the song's instrument is ", self._song.get_instrument().get_instrument_str())
 
         # Have Cozmo 'announce' when the game is starting #
-        await self._song_robot.say_text(COZMO_GAME_START, COZMO_SPEECH_DURATION).wait_for_completed()
+        await self._song_robot.say_text(COZMO_GAME_START).wait_for_completed()
 
         while self._song.is_not_finished(current_position) and self._game_over is False:
-            if self._game_started is True:
-                await self._song_robot.say_text(COZMO_NEXT_ROUND, COZMO_SPEECH_DURATION).wait_for_completed()
-                await sleep(1)
-
             await self.__play_round_transition_effect()
 
             notes = self._song.get_sequence_slice(current_position)
@@ -226,62 +164,12 @@ class SongMatch:
 
             current_position = self.__update_position(current_position)
 
-            self._game_started = True
-
         await self.__play_end_game_results()
 
-    async def __init_tutorial_loop(self) -> None:
-        current_position = TUTORIAL_STARTING_POSITION
-
-        while self._song.is_not_finished(current_position):
-            await self.__play_round_transition_effect()
-
-            notes = self._song.get_sequence_slice(current_position)
-            await self.__play_notes(notes)
-
-            user_wrong = await self.__tutorial_wait_for_player_to_match_notes(current_position)
-
-            await sleep(TIME_IN_BETWEEN_PLAYERS_AND_COZMO)
-
-            if user_wrong is True:
-                await self.__tutorial_wait_for_cozmo_to_match_notes(current_position)
-
-            current_position = self.__update_position(current_position)
-
-        # Have Cozmo congratulate the user for completing the tutorial
-        await self._song_robot.say_text(COZMO_GOOD_JOB, COZMO_SPEECH_DURATION, COZMO_VOICE_PITCH, True).\
-            wait_for_completed()
-
-    async def __tutorial_wait_for_player_to_match_notes(self, current_position: int) -> bool:
-        await self._song_robot.say_text('Your turn', COZMO_SPEECH_DURATION).wait_for_completed()
-        num_notes_played = 0
-        attempts = 0
-        notes = self._song.get_sequence_slice(current_position)
-        notes_to_play = notes.__len__() - 1
-        wrong_note = False
-        while attempts < 3 and num_notes_played != current_position:
-            correct_note = notes[num_notes_played]
-            cube_id = self._song.get_cube_id(correct_note)
-            note_cube = NoteCube.of(self._song_robot, cube_id)
-            await note_cube.flash(WHITE_LIGHT, 5)
-
-            event = await self.__lift_tap_guard(lambda: self._song_robot.world.wait_for(EvtObjectTapped))
-            tapped_cube = NoteCube(event.obj, self._song)
-
-            if tapped_cube.note != correct_note:
-                attempts += 1
-                await self.__play_wrong_note_effect(tapped_cube.cube_id)
-
-                if attempts < 3:
-                    await self._song_robot.say_text(COZMO_TRY_AGAIN, COZMO_SPEECH_DURATION).wait_for_completed()
-
-                wrong_note = True
-            else:
-                wrong_note = False
-                await self.__play_correct_sequence_effect(current_position, False)
-                num_notes_played += 1
-
-        return wrong_note
+        # Here, we could prompt the user and ask if they would like to play again,
+        # possibly using the option_prompter class and having two cubes represent YES or NO.
+        # Would need to make sure that cozmo only points to those two cubes.
+        # Need to reset certain variables #
 
     async def __wait_for_players_to_match_notes(self, current_position: int) -> None:
         for i, player in enumerate(self._players):
@@ -304,8 +192,8 @@ class SongMatch:
                 await self.__play_wrong_note_effect(tapped_cube.cube_id)
 
                 if self._players[player_index].num_wrong == MAX_STRIKES:
-                    await self._song_robot.say_text(str(self._players[player_index]) + ' you are out!',
-                                                    COZMO_SPEECH_DURATION).wait_for_completed()
+                    await self._song_robot.say_text(str(self._players[player_index]) + ' you are out!')\
+                        .wait_for_completed()
 
                 return
 
@@ -327,15 +215,15 @@ class SongMatch:
 
         if len(self._players) > 1:
             prompt = player.players_turn()
-            await self._song_robot.say_text(prompt, COZMO_SPEECH_DURATION).wait_for_completed()
+            await self._song_robot.say_text(prompt).wait_for_completed()
         else:
             prompt = player.players_turn()
-            await self._song_robot.say_text(prompt, COZMO_SPEECH_DURATION).wait_for_completed()
+            await self._song_robot.say_text(prompt).wait_for_completed()
 
     async def __wait_for_cozmo_to_match_notes(self, current_position: int) -> None:
         if self._song_robot.num_wrong < MAX_STRIKES:
             # Have Cozmo say that its his turn #
-            await self._song_robot.say_text(COZMO_TURN, COZMO_SPEECH_DURATION).wait_for_completed()
+            await self._song_robot.say_text(COZMO_TURN).wait_for_completed()
 
             notes = self._song.get_sequence_slice(current_position)
             played_correct_sequence, note = await self._song_robot.play_notes(notes, with_error=True)
@@ -345,12 +233,6 @@ class SongMatch:
                 self._song_robot.num_wrong += 1
                 wrong_cube_id = self._song.get_cube_id(note)
                 await self.__play_wrong_note_effect(wrong_cube_id, is_player=False)
-
-    async def __tutorial_wait_for_cozmo_to_match_notes(self, current_position: int) -> None:
-        await self._song_robot.say_text(COZMO_DEMONSTRATE, COZMO_SPEECH_DURATION).wait_for_completed()
-
-        notes = self._song.get_sequence_slice(current_position)
-        await self._song_robot.play_notes(notes, with_error=False)
 
     async def __check_for_game_over(self) -> None:
         all_players = self._players + [self._song_robot]
@@ -370,11 +252,7 @@ class SongMatch:
         await self.__play_notes(self._song.get_sequence())
         await animation.wait_for_completed()
         sleep(1)
-<<<<<<< HEAD
         exit(0) 
-=======
-        # exit(0)
->>>>>>> baeb4c30e66912479b664fde8e5119730b2ed3c3
 
     async def __get_winners(self) -> List[Player]:
         return [player for player in self._players if player.did_win]

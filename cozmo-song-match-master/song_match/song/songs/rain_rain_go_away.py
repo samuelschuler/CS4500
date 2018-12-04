@@ -26,10 +26,7 @@ class RainRainGoAway(Song):
 
     @property
     def _notes(self) -> List[Note]:
-<<<<<<< HEAD
-=======
         instrument = self.get_instrument().get_instrument_str()
->>>>>>> 5ceb25a5b2c8c0f6cc9063e9a9ef8290a3de6889
         return [
             Note('E5', instrument),
             Note('G5', instrument),
