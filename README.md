@@ -6,6 +6,6 @@ Members:
     Dishant Shrestha,
     Sam Schuler,
     Shaon Islam,
-    Sefik Mehmedovic,
+    Sefik Mehmedovic
     
 Original source code credit goes to: https://github.com/gbroques/cozmo-song-match
