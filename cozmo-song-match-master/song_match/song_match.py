@@ -44,11 +44,12 @@ class SongMatch:
     """Main game class."""
 
     def __init__(self, song: Song = None, num_players: int = None):
+        # Set the song to Mary Had  A Little Lamb if no other song was provided.
         self._song = MaryHadALittleLamb() if song is None else song
         self._num_players = num_players
-        self._num_games = 0
-        self._game_started = False
-        self._mode = SONGMATCH_MODE # Default to the songmatch game until the user picks an option
+        self._num_games = 0  # Start number of games as 0
+        self._game_started = False  # Game has not yet started
+        self._mode = SONGMATCH_MODE  # Default to the songmatch game until the user picks an option
 
         self._song_robot = None
         self._note_cubes = None
@@ -58,6 +59,8 @@ class SongMatch:
         self._prevent_tap = True  # Flag to prevent player from interrupting game by tapping cubes
         self._played_final_round = False  # Keep track of whether the final round has been played
 
+        # Keep track of the songs played. This dictionary represents all the songs that can be played;
+        # when the player completes a round, the song completed will be removed from the dictionary.
         self._songs_played = {
             'hcb': HotCrossBuns(),
             'mhall': MaryHadALittleLamb(),
@@ -66,15 +69,18 @@ class SongMatch:
             'ra': RingAround()
         }
 
+        # This dictionary represents the game mode options the user may select, and will be used as cube pagination
+        # with the option_prompter.
         self._mode_options = {
             1: TUTORIAL_MODE,
             2: SONGMATCH_MODE,
             3: EAR_TRAINING_MODE
         }
 
-        self._game_over = False
-        self._keep_playing = True
+        self._game_over = False  # Game has not yet started, so game over is false
+        self._keep_playing = True  # Default keep playing the game to true
 
+        # Init py_mixer
         init_mixer()
 
     async def play(self, robot: Robot) -> None:
@@ -87,19 +93,28 @@ class SongMatch:
         :return: None
         """
 
+        # While the user wishes to keep playing
         while self._keep_playing is True:
+            # Set up the song_robot, note_cubes, and effect_factory objects
             self._song_robot = SongRobot(robot, self._song)
             self._note_cubes = NoteCubes.of(self._song_robot)
             self._effect_factory = EffectFactory(self._song_robot)
             await self.__setup()
 
+            # If the tutorial mode was selected, begin the tutorial mode game loop.
             if self._mode is TUTORIAL_MODE:
                 await self.__init_tutorial_loop()
 
+            # Otherwise, init the main game loop.
             await self.__init_game_loop()
+
+            # Ask the user if they wish to play again.
             play_again = await self.__get_play_again_option(self._song_robot)
+
+            # Set the user response.
             self._keep_playing = self.__get_play_again(play_again)
 
+            # If the user wishes to keep playing, reset the game.
             if self._keep_playing is True:
                 self.reset_game()
 
