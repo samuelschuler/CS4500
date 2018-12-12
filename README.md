@@ -1,4 +1,11 @@
 # CS4500
-Group Project in the CS 4500 class
-Casey Boyer
-Dishant
+Expanded Cozmo Song Match by Cozmo Design Studios
+
+Members:
+    Casey Boyer
+    Dishant Shrestha
+    Sam Schuler
+    Shaon Islam
+    Sefik Mehmedovic
+    
+Original source code and credit goes to: https://github.com/gbroques/cozmo-song-match
