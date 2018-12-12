@@ -43,48 +43,10 @@ Also, for some ideas on how to pitch the game to children, check out our `Educat
 :download:`Download Educator's Guide <_static/Educator_Guide.pdf>`
 
 .. toctree::
-   :caption: Getting Started
-   :maxdepth: 2
-
-   pages/setup
-   pages/virtualenv
-   pages/pycharm
-   pages/codebase_conventions
-   pages/package_structure
-   pages/game_flow.rst
-
-.. toctree::
    :maxdepth: 2
    :caption: Song Match API
 
    song_match/song_match
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Dependencies
-
-   pages/dependencies
-   pages/graphic_assets
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Troubleshooting
-
-   pages/troubleshooting
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Future Expansion
-
-   pages/moving_forward
-
-.. toctree::
-   :maxdepth: 1
-   :caption: About
-
-   pages/the_cozmonauts
-   README
-
 
 Indices and tables
 ==================

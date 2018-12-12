@@ -66,10 +66,8 @@ def play_wrong_buzzer_sound() -> None:
     get_wrong_buzzer_sound().play()
 
 
-# Change this so that the function method also accepts the name of the instrument
-# def get_piano_note_sound_path(name: str) -> str:#
 def get_note_sound_path(name: str, instrument: str) -> str:
-    """Get the path to a piano note sound file.
+    """Get the path to a note sound file of the specified instrument.
 
     :param name: The name of the note. For example, C4.
     :param instrument: The name of the instrument to be played.
